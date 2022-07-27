@@ -5,3 +5,7 @@
 .card {
   margin-inline-start: 5px;
 }
+.card-body {
+  display: grid;
+  justify-items: center;
+}
