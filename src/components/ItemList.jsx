@@ -14,6 +14,7 @@ function ItemList(props) {
             description: "Bateria para automotor 12v 50Ah",
             price: 18000,
             pictureUrl: picture,
+            stock: 3,
           },
           {
             id: "42650",
@@ -21,6 +22,7 @@ function ItemList(props) {
             description: "Bateria para automotor 12v 65Ah",
             price: 20000,
             pictureUrl: picture,
+            stock: 5,
           },
           {
             id: "48750",
@@ -28,6 +30,7 @@ function ItemList(props) {
             description: "Bateria para automotor 12v 75Ah",
             price: 25000,
             pictureUrl: picture,
+            stock: 7,
           },
         ]);
       }, 2000);

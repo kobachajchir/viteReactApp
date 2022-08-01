@@ -30,13 +30,16 @@ export function ItemCounter(props) {
           <i className="bi bi-plus-lg"></i>
         </button>
       </div>
-      <a
-        href="#"
-        className="btn btn-primary"
-        onClick={() => comprar(props.productId, count)}
-      >
-        Agregar al carrito
-      </a>
+      <div className="w-100"></div>
+      <div className="col-12 row justify-content-center">
+        <a
+          href="#"
+          className="btn btn-primary addToCart col-6"
+          onClick={() => comprar(props.productId, count)}
+        >
+          Agregar al carrito
+        </a>
+      </div>
     </>
   );
 }

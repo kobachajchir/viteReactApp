@@ -10,11 +10,11 @@ function Item(props) {
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </p>
-        <ItemCounter
-          initial={1}
-          stock={props.item.stock}
-          productId={props.item.title}
-        />
+        <div className="col-12 row justify-content-center">
+          <a href="#" className="btn btn-primary seeProductInfo col-6">
+            Ver producto
+          </a>
+        </div>
       </div>
     </div>
   );
