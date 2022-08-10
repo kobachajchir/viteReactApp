@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import "./css/NavBar.css";
 
@@ -16,57 +17,80 @@ const NavBar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <a className="navbar-brand" href="#">
+        <Link to={"/home"} className="navbar-brand">
           RADAL
-        </a>
+        </Link>
         <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <ul className="navbar-nav">
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link dropdown-toggle"
-                href="#"
+                to={"/category"}
                 id="navbarDarkDropdownMenuLink"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Productos
-              </a>
+              </Link>
               <ul
                 className="dropdown-menu dropdown-menu-dark"
                 aria-labelledby="navbarDarkDropdownMenuLink"
               >
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link to={"/category/baterias"} className="dropdown-item">
                     Baterias
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Equipos de Radio &raquo;
-                  </a>
+                  <Link to={"/category/radios"} className="dropdown-item">
+                    Equipos de Radio
+                  </Link>
                   <ul className="dropdown-menu dropdown-submenu dropdown-submenu-dark">
                     <li>
-                      <a className="dropdown-item" href="#">
-                        Submenu item 1
-                      </a>
+                      <Link
+                        to={"/category/radios/motorola"}
+                        className="dropdown-item"
+                      >
+                        Motorola
+                      </Link>
+                      <Link
+                        to={"/category/radios/yedro"}
+                        className="dropdown-item"
+                      >
+                        Yedro
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#">
-                        Submenu item 2
-                      </a>
+                      <Link
+                        to={"/category/radios/multilink"}
+                        className="dropdown-item"
+                      >
+                        MultiLink
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Ticketeras
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Tacografos
-                  </a>
+                  <Link to={"/category/fulmar"} className="dropdown-item">
+                    Ful-Mar
+                  </Link>
+                  <ul className="dropdown-menu dropdown-submenu dropdown-submenu-dark">
+                    <li>
+                      <Link
+                        to={"/category/fulmar/relojesTaximetros"}
+                        className="dropdown-item"
+                      >
+                        Relojes Taximetros
+                      </Link>
+                      <Link
+                        to={"/category/fulmar/tacografos"}
+                        className="dropdown-item"
+                      >
+                        Tacografos
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
