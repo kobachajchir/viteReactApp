@@ -6,6 +6,7 @@ import { ItemListContainer } from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
+import Cart from "./components/Cart";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/home" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
           <Route
             exact
             path="/category/:idCat"

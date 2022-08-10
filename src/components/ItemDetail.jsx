@@ -1,7 +1,14 @@
 import { ItemCounter } from "./ItemCounter";
+import { useState } from "react";
 import "./css/ItemDetail.css";
+import ToCartButton from "./ToCartButton";
 
 function ItemDetail(props) {
+  const [count, setCount] = useState(0);
+  const [mountItemCounter, setMountItemCounter] = useState(true);
+  function handleAddToCart(evt) {
+    setMountItemCounter(false);
+  }
   return (
     <>
       <div className="col-12 col-md-6 imageDetailContainer">
@@ -12,11 +19,17 @@ function ItemDetail(props) {
           <h2 className="titleDetail">{props.item.title}</h2>
           <h5 className="priceDetail">${props.item.price}</h5>
           <p className="descriptionDetail">{props.item.description}</p>
-          <ItemCounter
-            initial={1}
-            stock={props.item.stock}
-            productId={props.item.title}
-          />
+          {mountItemCounter ? (
+            <ItemCounter
+              stock={props.item.stock}
+              productId={props.item.id}
+              addToCart={handleAddToCart}
+              modifyQuantity={setCount}
+              quantity={count}
+            />
+          ) : (
+            <ToCartButton />
+          )}
         </div>
       </div>
     </>
